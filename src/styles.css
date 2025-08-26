@@ -8,34 +8,46 @@ body {
   font-family: sans-serif;
 }
 
+html {
+  background-image: url("/src/public/scenery.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 body {
   display: grid;
+  background-color: hsla(0, 0%, 0%, 0.25);
   grid-template-rows: auto 1fr auto;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 header {
-  background-color: gray;
   padding: 1rem;
+  background-color: hsla(0, 0%, 0%, 0.25);
 }
 
 nav {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
 }
 
 footer {
-  background-color: gray;
+  background-color: hsla(0, 0%, 0%, 0.25);
   padding: 1rem;
   display: flex;
   justify-content: center;
   font-weight: 500;
   letter-spacing: 2px;
+  color: white;
 }
 
 .hero-img {
   width: 28rem;
   margin: 2rem 0 2rem 0;
+  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
 }
 
 #main-home {
@@ -46,4 +58,41 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 4rem;
+}
+
+.product-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-product-img {
+  width: 38rem;
+  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+}
+
+.default-btn {
+  background-color: oklch(52.7% 0.154 150.069);
+  border: none;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  color: white;
+  font-size: large;
+  letter-spacing: 2px;
+  border-radius: 0.5rem;
+  width: 9rem;
+  filter: drop-shadow(0 4px 4px rgb(0 0 0 / 0.15));
+  font-weight: lighter;
+}
+
+.nav-btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  color: white;
+  font-size: large;
+  letter-spacing: 2px;
+  border-radius: 0.5rem;
+  width: 9rem;
+  font-weight: normal;
+  font-size: larger;
 }
