@@ -10,6 +10,7 @@ body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  color: white;
 }
 
 html {
@@ -31,8 +32,13 @@ header {
   padding: 1rem;
   background-color: hsla(0, 0%, 0%, 0.25);
   display: flex;
-
   justify-content: space-between;
+}
+
+#content {
+  grid-row: 2;
+  min-height: 0;
+  height: 100%;
 }
 
 header > img {
@@ -98,8 +104,8 @@ footer {
 
 #main-home {
   display: flex;
-  height: 100%;
   width: 100%;
+  height: 100%;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
@@ -127,6 +133,12 @@ footer {
   border-radius: 0.5rem;
   filter: drop-shadow(0 4px 4px rgb(0 0 0 / 0.15));
   font-weight: lighter;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+}
+
+.default-btn:hover {
+  background-color: oklch(72.3% 0.219 149.579);
 }
 
 .nav-btn {
@@ -140,4 +152,89 @@ footer {
   width: 9rem;
   font-weight: normal;
   font-size: larger;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-category {
+  padding: 4rem 16rem 4rem 16rem;
+}
+
+.menu-header {
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: x-large;
+}
+
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem;
+}
+
+.menu-item {
+  background-color: oklch(70.382% 0.04025 257.029 / 0.318);
+  border-radius: 4rem;
+  padding: 1rem;
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item > img {
+  height: 10rem;
+  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+}
+
+.menu-item > h3 {
+  color: white;
+  text-align: center;
+  font-weight: 200;
+}
+
+#contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.contact-card {
+  background-color: oklch(70.382% 0.04025 257.029 / 0.318);
+  max-width: 648px;
+  width: 100%;
+  min-width: 412px;
+  height: 648px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2rem;
+  position: relative;
+  gap: 2rem;
+}
+
+.contact-card > h1 {
+  position: absolute;
+  top: 1rem;
+}
+
+.contact-card > h3 {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: 400;
+}
+
+.active-nav::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 50%;
+  border-bottom: oklch(68.1% 0.162 75.834) 3px solid;
 }
