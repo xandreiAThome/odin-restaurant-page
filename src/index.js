@@ -8,6 +8,8 @@ let currRoute = "home";
 const navBtn = document.querySelectorAll(".nav-btn");
 const content = document.getElementById("content");
 
+ShowHome();
+
 navBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     if (currRoute === e.currentTarget.value) return;

@@ -17,5 +17,10 @@ export const menuData = {
       alt: "halo-halo",
       name: "Halo-Halo",
     },
+    {
+      src: require("./public/ice-crumble.png"),
+      alt: "ice crumble",
+      name: "Ice Crumble",
+    },
   ],
 };
