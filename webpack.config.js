@@ -13,7 +13,12 @@ module.exports = {
   devServer: {
     watchFiles: ["./src/template.html"],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./src/template.html" })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/template.html",
+      favicon: "./src/public/McGregors.png",
+    }),
+  ],
   module: {
     rules: [
       {
