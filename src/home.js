@@ -1,4 +1,4 @@
-import burgerFries from "./public/burger-fries.png";
+import burgerFries from "./public/burger-fries.webp";
 
 export default function ShowHome() {
   const content = document.getElementById("content");

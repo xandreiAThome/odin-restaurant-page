@@ -2,21 +2,21 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: "./src/index.js",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-  devtool: "eval-source-map",
+  devtool: false, // Disabled for production - reduces bundle size significantly
   devServer: {
     watchFiles: ["./src/template.html"],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
-      favicon: "./src/public/McGregors.png",
+      favicon: "./src/public/McGregors.webp",
     }),
   ],
   module: {
@@ -31,7 +31,7 @@ module.exports = {
       },
       // webpack.config.js
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
         type: "asset/resource",
       },
     ],
